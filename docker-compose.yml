@@ -274,15 +274,15 @@ services:
     image: opencti/connector-crowdsec:6.2.1
     environment:
       - OPENCTI_URL=http://opencti:8080
-      - OPENCTI_TOKEN=562c5b36-f1c2-401d-9e6e-213c3a93d4f1
-      - CONNECTOR_ID=e7a2c8b9-4f3d-4b2a-9e6f-8c2d1a7b3f4e
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - CONNECTOR_ID=${CONNECTOR_CROWDSEC_ID}
       - CONNECTOR_TYPE=INTERNAL_ENRICHMENT
       - CONNECTOR_SCOPE=IPv4-Addr,IPv6-Addr
       - CONNECTOR_CONFIDENCE_LEVEL=100
       - CONNECTOR_LOG_LEVEL=error
       - CONNECTOR_UPDATE_EXISTING_DATA=false
       - CONNECTOR_NAME=CrowdSec
-      - CROWDSEC_KEY=TLyk7MVRlW5VVyt3W25J41cQrPDjaFU1hXjWiLoa
+      - CROWDSEC_KEY=${CROWDSEC_API_KEY}
       - CROWDSEC_API_VERSION=v2
     restart: always
     depends_on:
