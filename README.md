@@ -1,107 +1,105 @@
-# 🛡️ OpenCTI - Plateforme de Cyber Threat Intelligence
+# 🛡️ OpenCTI - Cyber Threat Intelligence Platform
 
-Bienvenue sur le dépôt **OpenCTI** !  
-Ce projet propose une plateforme collaborative pour la gestion, l’analyse et le partage de la Cyber Threat Intelligence (CTI).
+Welcome to the **OpenCTI** repository!  
+This project provides a collaborative platform for managing, analyzing, and sharing Cyber Threat Intelligence (CTI).
 
 ---
 
-## 🚀 Objectif du projet
+## 🚀 Project Purpose
 
-OpenCTI vise à centraliser et structurer les informations sur les menaces cyber, afin de faciliter leur exploitation par les équipes de sécurité, les analystes et les partenaires.
+OpenCTI aims to centralize and structure cyber threat information, making it easier for security teams, analysts, and partners to leverage intelligence.
 
-- **Collecte** : Intégration de multiples sources de données (connecteurs).
-- **Analyse** : Visualisation et corrélation des menaces.
-- **Partage** : Diffusion des indicateurs et rapports auprès des parties prenantes.
+- **Collection**: Integrate multiple data sources (connectors).
+- **Analysis**: Visualize and correlate threats.
+- **Sharing**: Distribute indicators and reports to stakeholders.
 
 ---
 
 ## 🏗️ Architecture
 
-Le projet utilise **Docker Compose** pour orchestrer les différents services :
+The project uses **Docker Compose** to orchestrate the following services:
 
-- **OpenCTI** : Plateforme principale (Node.js)
-- **Elasticsearch** : Moteur de recherche et d’indexation
-- **Redis** : Cache et gestion des files d’attente
-- **MinIO** : Stockage d’objets compatible S3
-- **RabbitMQ** : Message broker pour les connecteurs
-- **Connecteurs** : Modules d’import/export et d’enrichissement (CrowdSec, STIX, CSV, TXT, etc.)
+- **OpenCTI**: Main platform (Node.js)
+- **Elasticsearch**: Search and indexing engine
+- **Redis**: Cache and queue management
+- **MinIO**: S3-compatible object storage
+- **RabbitMQ**: Message broker for connectors
+- **Connectors**: Import/export and enrichment modules (CrowdSec, STIX, CSV, TXT, etc.)
 
 ---
 
-## 📦 Installation rapide
+## 📦 Quick Installation
 
-1. **Clonez le dépôt**
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/BasicOneCruisider/opencti.git
    cd opencti
    ```
 
-2. **Configurez les variables d’environnement**  
-   Modifiez le fichier `.env` pour adapter les mots de passe, tokens et clés API à votre environnement.
+2. **Configure environment variables**  
+   Edit the `.env` file to set passwords, tokens, and API keys for your environment.
 
-3. **Lancez la plateforme**
+3. **Start the platform**
 
    ```bash
    docker compose up -d
    ```
 
-4. **Accédez à l’interface**  
-   Ouvrez [http://localhost:8080](http://localhost:8080) dans votre navigateur.
+4. **Access the interface**  
+   Open [http://localhost:8080](http://localhost:8080) in your browser.
 
 ---
 
-## 🔌 Connecteurs disponibles
+## 🔌 Available Connectors
 
-- **CrowdSec** : Enrichissement des adresses IP avec la CTI CrowdSec
-- **Export STIX/CSV/TXT** : Export des données dans différents formats
-- **Import STIX/Document** : Import de fichiers structurés ou non
-- **Worker** : Traitement asynchrone des tâches
-
----
+- **CrowdSec**: Enrich IP addresses with CrowdSec CTI
+- **Export STIX/CSV/TXT**: Export data in various formats
+- **Import STIX/Document**: Import structured and unstructured files
+- **Worker**: Asynchronous task processing
 
 ---
 
 ## ⚙️ Configuration
 
-- Les mots de passe et tokens sont à définir dans le fichier `.env`
-- Les volumes Docker assurent la persistance des données
-- Les ports exposés permettent l’accès aux interfaces web et API
+- Set passwords and tokens in the `.env` file
+- Docker volumes ensure data persistence
+- Exposed ports allow access to web interfaces and APIs
 
 ---
 
 ## 📝 Contribution
 
-Les contributions sont les bienvenues !  
-N’hésitez pas à ouvrir une issue ou une pull request pour proposer des améliorations ou signaler des bugs.
+Contributions are welcome!  
+Feel free to open an issue or pull request to suggest improvements or report bugs.
 
 ---
 
 ## 📚 Documentation
 
-- [Documentation officielle OpenCTI](https://www.opencti.io/docs)
+- [OpenCTI Official Documentation](https://www.opencti.io/docs)
 - [Docker Compose](https://docs.docker.com/compose/)
 - [CrowdSec CTI](https://www.crowdsec.net/)
 
 ---
 
-## 💡 Bonnes pratiques
+## 💡 Best Practices
 
-- Changez tous les mots de passe et tokens par défaut avant la mise en production
-- Utilisez un réseau Docker dédié pour isoler les services
-- Sauvegardez régulièrement vos volumes de données
-
----
-
-## 🛠️ Licence
-
-Ce projet est distribué sous licence MIT.
+- Change all default passwords and tokens before production
+- Use a dedicated Docker network to isolate services
+- Regularly back up your data volumes
 
 ---
 
-## 🤝 Remerciements
+## 🛠️ License
 
-Merci à tous les contributeurs et à la communauté OpenCTI !  
-Pour toute question, contactez-nous via GitHub.
+This project is distributed under the MIT license.
+
+---
+
+## 🤝 Acknowledgements
+
+Thanks to all contributors and the OpenCTI community!  
+For any questions, contact us via GitHub.
 
 ---
